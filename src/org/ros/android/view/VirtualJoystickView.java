@@ -361,7 +361,7 @@ public class VirtualJoystickView extends RelativeLayout implements AnimationList
     case MotionEvent.ACTION_POINTER_UP:
     case MotionEvent.ACTION_UP: {
       // Check if the contact that initiated the interaction is up.
-      if ((action & MotionEvent.ACTION_POINTER_INDEX_MASK) >> MotionEvent.ACTION_POINTER_INDEX_SHIFT == pointerId) {
+      if ((action & MotionEvent.ACTION_POINTER_ID_MASK) >> MotionEvent.ACTION_POINTER_ID_SHIFT == pointerId) {
         onContactUp();
       }
       break;
