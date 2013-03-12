@@ -228,7 +228,10 @@ public class DistanceView extends GLSurfaceView implements OnTouchListener, Node
       }
       // When the second contact touches the screen initialize contactDistance
       // for the immediate round of interaction.
-      case MotionEvent.ACTION_POINTER_1_DOWN: {
+      //
+      // TODD: REMOVED ACTION_POINTER_1_DOWN AND REPLACED IT WITH ACTION_POINTER_INDEX_MASK
+      // LIKELY NEED MORE UPDATES HERE TO GET THE DATA INDEX WITH THE ACTION_POINTER_DOWN
+      case MotionEvent.ACTION_POINTER_INDEX_MASK: {
         contactDistance =
             calculateDistance(event.getX(0), event.getY(0), event.getX(1), event.getY(1));
         break;
